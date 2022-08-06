@@ -1,0 +1,15 @@
+server:
+#  servlet:
+#    context-path: /PostgreSQL
+  port: 8080
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/mydb
+    username: root
+    password: iloveyou
+    driver-class-name: org.postgresql.Driver
+
+mybatis:
+  type-aliases-package: com.muran.web3.bean
+  mapper-locations: classpath:mapper/*.xml
