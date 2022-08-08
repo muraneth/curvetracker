@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.muran.web3.dao.mapper.VecrvDepositMapper">
+    <select id="queryAll" resultType="VecrvDepositEventDO">
+        select * from vecrv_evt_deposit
+    </select>
+
+    <insert id="insert" parameterType="VecrvDepositEventDO">
+        insert into
+        vecrv_evt_deposit(
+        contract_address,
+        tx_hash,
+        provider,
+        value,
+        lock_time,
+        type,
+        ts,
+        index,
+        block_time,
+        block_number
+        ) values(
+        #{contractAddress},
+        #{txHash},
+        #{provider},
+        #{value},
+        #{lockTime},
+        #{type},
+        #{ts},
+        #{index},
+        #{blockTime},
+        #{blockNumber}
+        )
+    </insert>
+
+</mapper>

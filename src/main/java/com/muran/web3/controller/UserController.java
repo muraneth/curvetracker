@@ -1,8 +1,8 @@
 package com.muran.web3.controller;
 
-import com.muran.web3.bean.User;
+import com.muran.web3.dao.model.UserDO;
 
-import com.muran.web3.mapper.UserMapper;
+import com.muran.web3.dao.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,18 +16,18 @@ public class UserController {
 	private UserMapper mapper;
 
 	@RequestMapping("/select")
-	public List<User> select() {
+	public List<UserDO> select() {
 		return mapper.getUser();
 	}
 
 	@RequestMapping("/insert")
-	public int insert(User user) {
-		return mapper.insertUser(user);
+	public int insert(UserDO userDO) {
+		return mapper.insertUser(userDO);
 	}
 
 	@RequestMapping("/update")
-	public int update(User user) {
-		return mapper.updateUser(user);
+	public int update(UserDO userDO) {
+		return mapper.updateUser(userDO);
 	}
 
 	@RequestMapping("/delete")

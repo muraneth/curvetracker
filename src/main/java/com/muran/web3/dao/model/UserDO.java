@@ -1,6 +1,6 @@
-package com.muran.web3.bean;
+package com.muran.web3.dao.model;
 
-public class User {
+public class UserDO {
 	private String name;
 	private Integer age;
 
